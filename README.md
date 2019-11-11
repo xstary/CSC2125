@@ -1,2 +1,2 @@
-# CSC2512
-Course Project for CSC2512: simulation of blockchain and analysis
+# CSC2125
+Course Project for CSC2125: simulation of blockchain and analysis
