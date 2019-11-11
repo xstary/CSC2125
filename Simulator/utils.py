@@ -3,16 +3,16 @@ from datetime import datetime
 import random
 from ast import literal_eval as make_tuple
 import scipy.stats
-try:
-    from Crypto.Hash import keccak
+# try:
+#     from Crypto.Hash import keccak
 
-    def keccak_256(value):
-        return keccak.new(digest_bits=256, data=value).digest()
-except ImportError:
-    import sha3 as _sha3
+#     def keccak_256(value):
+#         return keccak.new(digest_bits=256, data=value).digest()
+# except ImportError:
+#     import sha3 as _sha3
 
-    def keccak_256(value):
-        return _sha3.keccak_256(value).digest()
+#     def keccak_256(value):
+#         return _sha3.keccak_256(value).digest()
 
 
 def get_latency_delay(env, origin: str, destination: str, n=1):
@@ -67,10 +67,13 @@ def get_sent_delay(env, message_size: float, origin: str, destination: str, n=1)
 def _calc_throughput(distribution: dict, message_size: float, n):
     rand_throughputs = get_random_values(distribution, n)
     delays = []
+    print(message_size)
     for throughput in rand_throughputs:
         delay = (message_size * 8) / throughput
+
         delays.append(delay)
     if len(delays) == 1:
+        print(delays[0])
         return round(delays[0], 3)
     else:
         return delays
@@ -112,5 +115,5 @@ def is_numeric(x):
     return isinstance(x, int)
 
 
-def encode_int32(v):
-    rettransactionurn v.to_bytes(32, byteorder='big')
+# def encode_int32(v):
+#     return v.to_bytes(32, byteorder='big')
