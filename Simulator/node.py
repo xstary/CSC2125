@@ -145,6 +145,7 @@ class Node:
             created at {envelope.timestamp} \
             from {envelope.origin.nid}')
 
+
     def listening_node(self, connection):
         while True:
             # Get the messages from  connection
@@ -156,18 +157,21 @@ class Node:
                 self.env, message_size, origin_region, dest_region)
             yield self.env.timeout(received_delay)
 
-            # Monitor the block propagation on Ethereum
+
+
+            # Monitor the block propagation
             if envelope.msg.id == 'blocks':
                 block_propagation = self.env.data['block_propagation'][
                     f'{envelope.origin.nid}_{envelope.destination.nid}']
                 blocks = {}
                 for block in envelope.msg.blocks:
-                    initial_time = block_propagation.get(block.hash, None)
+                    initial_time = block_propagation.get(f'{block.hash}', None)
                     if initial_time is not None:
                         propagation_time = self.env.now - initial_time
                         blocks.update({f'{block.hash}': propagation_time})
-                self.env.data['block_propagation'][f'{envelope.origin.nid}_{envelope.destination.nid}'].update(
-                    blocks)
+                        # print(f'sent:{initial_time} received:{self.env.now}')
+                self.env.data['block_propagation']\
+                    [f'{envelope.origin.nid}_{envelope.destination.nid}'].update(blocks)
 
             self._read_envelope(envelope)
 
@@ -211,7 +215,7 @@ class Node:
                 for block in msg.blocks:
                     blocks.update({f'{block.hash}': self.env.now})
                 self.env.data['block_propagation'][f'{origin_node.nid}_{destination_node.nid}'].update(blocks)
-            print(msg.size)
+            # print(msg.size)
             upload_transmission_delay = get_sent_delay(
                 self.env, msg.size, origin_node.region, destination_node.region)
             yield self.env.timeout(upload_transmission_delay)
