@@ -1,4 +1,5 @@
 import time
+from datetime import datetime
 from json import dumps as dump_json
 from world import SimulationWorld
 from nodeGenerator import NodeGenerator
@@ -21,6 +22,7 @@ def report_node_chain(world, nodes_list):
             chain_list.append(str(b.hash))
             num_blocks += 1
         chain_list.append(str(head.hash))
+
         key = f'{node.nid}_chain'
         world.env.data[key] = {
             'nid': node.nid,
@@ -30,13 +32,20 @@ def report_node_chain(world, nodes_list):
             'number_of_blocks': num_blocks,
             'chain_list': chain_list
         }
-def report_summary(world, nodes_list):        
-        world.env.data['number_of_nodes']=len(nodes_list)
-        world.env.data['number_of_blocks']= Block.nextBlockHash
+def report_system_summary(world, nodes_list): 
+    world.env.data['system summary']= {
+                'start_simulation_time': datetime.utcfromtimestamp(
+                    world._initial_time).strftime('%m-%d %H:%M:%S'),
+                'end_simulation_time': datetime.utcfromtimestamp(
+                    world._initial_time + world._sim_duration).strftime('%m-%d %H:%M:%S'),
+                'number_of_nodes': len(nodes_list),
+                'number_of_blocks': Block.nextBlockHash
+            }
+
 
 
 def run_model():
-    now = int(time.time())  # Current time
+    now = 0  # Current time
     duration = 3600  # 1h in seconds
 
     world = SimulationWorld(
@@ -78,7 +87,7 @@ def run_model():
     world.start_simulation()
 
     report_node_chain(world, nodes_list)
-    report_summary(world, nodes_list)
+    report_system_summary(world, nodes_list)
     write_report(world)
 
 
