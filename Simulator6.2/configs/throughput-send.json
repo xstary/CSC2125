@@ -2,27 +2,27 @@
   "locations": {
     "NORTH_AMERICA": {
       "name": "norm",
-      "parameters": "(4634.0, 500)"
+      "parameters": "(22770.0, 500)"
     },
     "EUROPE": {
       "name": "norm",
-      "parameters": "(8149.45, 1000)"
+      "parameters": "(40347.25, 1000)"
     },
     "SOUTH_AMERICA": {
       "name": "norm",
-      "parameters": "(1785.55, 500)"
+      "parameters": "(8527.75, 500)"
     },
 	"ASIA_PACIFIC": {
       "name": "norm",
-      "parameters": "(5379.35, 1000)"
+      "parameters": "(26496.74, 1000)"
     },
 	"JAPAN": {
       "name": "norm",
-      "parameters": "(3474.75, 1000)"
+      "parameters": "(16973.74, 1000)"
     },
 	"AUSTRALIA": {
       "name": "norm",
-      "parameters": "(5228.1818, 1000)"
+      "parameters": "(25740.909, 1000)"
     }
   }
 }
