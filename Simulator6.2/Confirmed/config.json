@@ -1,0 +1,29 @@
+{
+  "blockchain": "bitcoin",
+  "locations": ["NORTH_AMERICA", "EUROPE", "SOUTH_AMERICA", "ASIA_PACIFIC", "JAPAN", "AUSTRALIA"],
+  "bitcoin": {
+    "average_txs_per_block": 2200,
+    "number_transactions_per_block": {
+      "name": "beta",
+      "parameters": "(3.4538110963361333, 4.240939683805738, 705.4815204696233, 2159.387403502942)"
+    },
+	"average_txs_size":544,
+	"number_of_nodes": 9400,
+    "nconnections":{
+      "name": "norm",
+      "parameters": "(8,1)"
+    },
+    "message_size_kB": {
+      "header": 0.024,
+      "version": 0.095,
+      "verack": 0,
+      "inv_vector": 0.036,
+      "tx": 0.54,
+      "block_base": 0.082
+    }
+  }
+  
+}
+ 
+
+
