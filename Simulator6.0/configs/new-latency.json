@@ -1,0 +1,52 @@
+#Unit: millisecond
+{"LATENCY_2015" = { 
+		"NORTH_AMERICA":{
+			"NORTH_AMERICA": 36 , 
+			"EUROPE":119, 
+			"SOUTH_AMERICA": 255, 
+			"ASIA_PACIFIC": 310, 
+			"JAPAN": 154,
+			"AUSTRALIA":208
+		},
+		"EUROPE":{
+			"NORTH_AMERICA": 119 , 
+			"EUROPE":12, 
+			"SOUTH_AMERICA": 221, 
+			"ASIA_PACIFIC": 242, 
+			"JAPAN": 266,
+			"AUSTRALIA":350
+		},
+		"SOUTH_AMERICA":{
+			"NORTH_AMERICA": 255 , 
+			"EUROPE":221, 
+			"SOUTH_AMERICA": 137, 
+			"ASIA_PACIFIC": 347, 
+			"JAPAN": 256,
+			"AUSTRALIA":269
+		},
+		"ASIA_PACIFIC":{
+			"NORTH_AMERICA": 310 , 
+			"EUROPE":242, 
+			"SOUTH_AMERICA": 347, 
+			"ASIA_PACIFIC": 99, 
+			"JAPAN": 172,
+			"AUSTRALIA":278
+		},
+		"JAPAN":{
+			"NORTH_AMERICA": 154 , 
+			"EUROPE":266, 
+			"SOUTH_AMERICA": 256, 
+			"ASIA_PACIFIC": 172, 
+			"JAPAN": 9,
+			"AUSTRALIA":163
+		},
+		"AUSTRALIA":{
+			"NORTH_AMERICA": 208 , 
+			"EUROPE":350, 
+			"SOUTH_AMERICA": 269, 
+			"ASIA_PACIFIC": 278, 
+			"JAPAN": 163,
+			"AUSTRALIA":22
+		}
+	}
+}

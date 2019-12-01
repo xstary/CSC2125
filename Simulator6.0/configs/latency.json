@@ -1,0 +1,47 @@
+ {
+  "locations": {
+    "Asia": {
+      "Asia": {
+        "name": "norm",
+        "parameters": "(11.104508341331055, 2)"
+      },
+      "Europe": {
+        "name": "norm",
+        "parameters": "(151.0275, 50)"
+      },
+      "America": {
+        "name": "norm",
+        "parameters": "(200.00904977375566, 50)"
+      }
+    },
+    "Europe": {
+      "Asia": {
+        "name": "norm",
+        "parameters": "(155.4275, 50)"
+      },
+      "Europe": {
+        "name": "norm",
+        "parameters": "(10.4360455224301525, 2)"
+      },
+      "America": {
+        "name": "norm",
+        "parameters": "(75.6995, 25)"
+      }
+    },
+    "America": {
+      "Asia": {
+        "name": "norm",
+        "parameters": "(188.00904977375566, 60)"
+      },
+      "Europe": {
+        "name": "norm",
+        "parameters": "(73.6995,25)"
+      },
+      "America": {
+        "name": "norm",
+        "parameters": "(10.540906482531864, 2)"
+      }
+    }
+  }
+}
+

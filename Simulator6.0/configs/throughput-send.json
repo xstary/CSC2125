@@ -1,0 +1,16 @@
+{
+  "locations": {
+    "Asia": {
+      "name": "norm",
+      "parameters": "(20000.96537303257, 2000)"
+    },
+    "Europe": {
+      "name": "norm",
+      "parameters": "(20000.96537303257, 3000)"
+    },
+    "America": {
+      "name": "norm",
+      "parameters": "(15000.96537303257, 3000)"
+    }
+  }
+}
