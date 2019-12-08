@@ -1,0 +1,8 @@
+{
+  "bitcoin": {
+    "block_validation": {
+      "name": "lognorm",
+      "parameters": "(0.11269612563, 0.23958425545, 0.00264255485)"
+    }    
+  }
+}
