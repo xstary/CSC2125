@@ -1,9 +1,0 @@
-{
-    "system summary": {
-        "start_simulation_time": "01-01 00:00:00",
-        "end_simulation_time": "01-01 02:00:00",
-        "number_of_nodes": 900,
-        "number_of_blocks": 11,
-        "fork_rate": 0.0
-    }
-}
